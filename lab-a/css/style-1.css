@@ -1,0 +1,29 @@
+body {
+  background-color: #f7cdf6;
+  text-align: center;
+}
+
+h1 {
+  color: #851b81;
+  text-decoration: underline;
+  background-color: #f7e1f5;
+}
+
+ul {
+  display: table;
+  margin: 0 auto;
+}
+
+img {
+  border-radius: 9px;
+  height: 200px;
+  border-style: dotted;
+  border-color: #851b81;
+  margin: 20px;
+}
+
+div.text {
+  display: inline-flex;
+  background-color: #f7e1f5;
+}
+
