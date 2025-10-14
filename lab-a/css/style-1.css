@@ -1,11 +1,12 @@
 body {
   background-color: #f7cdf6;
   text-align: center;
+  font-family: "Halvetica",  "Arial", sans-serif;
 }
 
 h1 {
   color: #851b81;
-  text-decoration: underline;
+  font-weight: bold;
   background-color: #f7e1f5;
 }
 
@@ -16,7 +17,7 @@ ul {
 
 img {
   border-radius: 9px;
-  height: 200px;
+  height: 400px;
   border-style: dotted;
   border-color: #851b81;
   margin: 20px;
@@ -25,5 +26,14 @@ img {
 div.text {
   display: inline-flex;
   background-color: #f7e1f5;
+  padding: 1em;
+}
+
+footer {
+  width: 100%;
+  margin: auto;
+  border-top: 1px solid;
+  border-top-color: #851b81;
+  padding-top: 3px;
 }
 
