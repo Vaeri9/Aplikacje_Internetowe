@@ -46,3 +46,11 @@ ul {
 #taskText {
     width: 50%;
 }
+
+.highlight {
+    background-color: #748cab;
+}
+
+mark {
+  background-color: #748cab;
+}
