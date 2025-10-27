@@ -1,0 +1,48 @@
+body {
+    background: linear-gradient(#3e5c76, #1d2d44);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    background-color: #f0ebd8;
+    padding: 1em;
+    border-radius: 9px;
+    min-width: 30%;
+}
+
+#searchBar {
+    width: 100%;
+}
+
+.deleteButton {
+    float: right;
+}
+
+#taskAddSave {
+    float: right;
+}
+
+li {
+    width: 100%;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#taskAddText {
+    width: 50%;
+}
+
+#taskText {
+    width: 50%;
+}

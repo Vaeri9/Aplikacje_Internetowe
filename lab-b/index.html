@@ -4,12 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <title>TODO</title>
-  <style src="style.css"></style>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <h1>cos napewno</h1>
+    <div id="container">
+        <input type="text" id="searchBar" placeholder="Search">
+        <ul id="taskList">
+          <!--<li> <input type="checkbox"><span>task 1</span> <span>date</span><button type="button" class="deleteButton">Delete</button></li>
+          <li> <input type="checkbox">task 2 <button type="button" class="deleteButton">Delete</button></li>
+          <li> <input type="checkbox">task 3 <button type="button" class="deleteButton">Delete</button></li>-->
+        </ul>
+        <input type="text" id="taskAddText" placeholder="Add a task"> <input type="date" id="taskAddDate" placeholder="Choose a date"> <button type="button" id="taskAddSave" onclick="Todo.addTask()">Save</button>
+    </div>
 </body>
+
+<script src="script.js"></script>
 
 </html>
