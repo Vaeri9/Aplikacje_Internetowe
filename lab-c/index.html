@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geolocation Puzzle</title>
+    <link rel="stylesheet" href="style.css"></linkrel>
+
+    <link rel="stylesheet" href="leaflet/leaflet.css" />
+    <script src="leaflet/leaflet.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="map">
+            <canvas id="liveMap"></canvas> 
+            <br>
+            <div id="positionInfo">
+                Latitude: <span id="latitude"></span><br>
+                Longitude: <span id="longitude"></span><br>
+            </div>
+            <br>
+            <button id="locationButton">Get my location</button>
+            <button id="saveButton">Save map image</button>
+        </div>
+
+        <div id="rasterMap">
+            <img src="" alt="Saved map image">
+            <canvas id="savedMapImage"></canvas>
+        </div>
+
+        <div id="shuffledPuzzleDiv">
+            <canvas id="shuffledPuzzle"></canvas>
+        </div>
+
+        <div id="finishedPuzzleDiv">
+            <canvas id="finishedPuzzle"></canvas>
+        </div>
+    </div>
+</body>
+
+<script src="script.js"></script>
