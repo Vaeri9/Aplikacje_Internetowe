@@ -31,14 +31,16 @@ function getLocation() {
     }
 
     navigator.geolocation.getCurrentPosition((position) => {
-        document.getElementById("latitude").innerText = position.coords.latitude;
-        document.getElementById("longitude").innerText = position.coords.longitude;
+      let latitude = position.coords.latitude;
+      let longitude = position.coords.longitude;
+      document.getElementById("latitude").innerText = latitude;
+      document.getElementById("longitude").innerText = longitude;
 
-        let map = L.map('liveMap').setView([position.coords.latitude, position.coords.longitude], 13);
-        L.tileLayer.provider('Esri.WorldImagery').addTo(map);
-        let marker = L.marker([position.coords.latitude, position.coords.longitude]).addTo(map);
-        marker.bindPopup("<strong>Hello!</strong><br>This is a popup.");
-        map.setView([position.coords.latitude, position.coords.longitude]);
+      let map = L.map('liveMap').setView([latitude, longitude], 13);
+      L.tileLayer.provider('Esri.WorldImagery').addTo(map);
+      let marker = L.marker([latitude, longitude]).addTo(map);
+      marker.bindPopup("<strong>Hello!</strong><br>This is a popup.");
+      map.setView([latitude, longitude]);
     }, (positionError) => {
         console.error(positionError);
     }, {

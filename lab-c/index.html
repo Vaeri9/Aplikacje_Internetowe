@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Geolocation Puzzle</title>
-    <link rel="stylesheet" href="style.css"></linkrel>
+    <link rel="stylesheet" href="leaflet-1.7.1/leaflet.css" />
+    <script src="leaflet-1.7.1/leaflet-src.js"></script>
+    <script src="leaflet-1.7.1/leaflet-providers.js"></script>
+    <script src="leaflet-1.7.1/leaflet-image.js"></script>
 
-    <link rel="stylesheet" href="leaflet/leaflet.css" />
-    <script src="leaflet/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css"></linkrel>
 </head>
 
 <body>
     <div class="container">
         <div id="map">
-            <canvas id="liveMap"></canvas> 
+            <div id="liveMap"></div> 
             <br>
             <div id="positionInfo">
-                Latitude: <span id="latitude"></span><br>
-                Longitude: <span id="longitude"></span><br>
+                Latitude: <span id="latitude"></span> Longitude: <span id="longitude"></span><br>
             </div>
             <br>
             <button id="locationButton">Get my location</button>
