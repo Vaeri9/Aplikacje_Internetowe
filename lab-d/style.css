@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(97, 139, 187);
+}
+
+body div {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;  
+    font-size: 30px;
+}
