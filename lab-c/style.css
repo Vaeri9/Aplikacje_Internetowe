@@ -30,3 +30,35 @@ body {
     border: 1px solid black;
     margin: auto;
 }
+
+#shuffledPuzzle {
+    width: 408px;
+    height: 408px;
+    border: 1px solid black;
+    margin: auto;
+}
+
+#finishedPuzzle {
+    width: 408px;
+    height: 408px;
+    border: 1px solid black;
+    margin: auto;
+    line-height:0px;
+    padding: 0;
+}
+
+#shuffledPuzzleDiv {
+    line-height:0px;
+}
+
+#shuffledPuzzle {
+    padding: 0;
+}
+
+#puzzlePiece {
+    border: 1px solid black;
+}
+
+#blank {
+    border: 1px solid black;
+}
