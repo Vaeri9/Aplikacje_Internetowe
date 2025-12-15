@@ -32,6 +32,8 @@ body {
 }
 
 #shuffledPuzzle {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     width: 408px;
     height: 408px;
     border: 1px solid black;
@@ -55,10 +57,10 @@ body {
     padding: 0;
 }
 
-#puzzlePiece {
+.puzzlePiece {
     border: 1px solid black;
 }
 
-#blank {
+.blank {
     border: 1px solid black;
 }

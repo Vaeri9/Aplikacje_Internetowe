@@ -7,16 +7,33 @@ const taskList = document.getElementById("taskList");
 let Todo = {
     tasks: [],
     draw: function() {
-        toSave = [];
-        for (let task of this.tasks) {
-            toSave.push(task.innerHTML);
-        }
-        localStorage.setItem("tasks", JSON.stringify(toSave));
-        
         taskList.innerHTML = "";
         for (let task of this.tasks) {
             taskList.appendChild(task);
         }
+
+        var ul, li, i;
+        ul = document.getElementById("taskList");
+        li = ul.getElementsByTagName('li');
+        tasksToSave = [];
+        datesToSave = [];
+        checkboxesToSave = [];
+        console.log(li);
+
+        for (i = 0; i < li.length; i++) {
+            console.log(li[i]);
+            console.log(li[i].firstChild.checked);
+            tasksToSave.push(li[i].querySelector(".taskText").innerHTML);
+            datesToSave.push(li[i].querySelector(".taskDate").innerHTML);
+            if (li[i].firstChild.checked){
+                checkboxesToSave.push(1); 
+            } else {
+                checkboxesToSave.push(0); 
+            }
+        }
+        localStorage.setItem("tasks", JSON.stringify(tasksToSave));
+        localStorage.setItem("dates", JSON.stringify(datesToSave));
+        localStorage.setItem("checkboxes", JSON.stringify(checkboxesToSave)); 
     },
     filterTasks: function(){
         var ul, li, a, i;
@@ -125,12 +142,16 @@ let Todo = {
     restorePreviousTasks(){
         // read previous tasks. If no tasks were found, start with an empty list
         let storedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        let storedDates = JSON.parse(localStorage.getItem("dates")) || [];
+        let storedCheckboxes = JSON.parse(localStorage.getItem("checkboxes")) || [];
 
         if (storedTasks.length > 0){
-            for (let oldtask of storedTasks) {
+            for (let i = 0; i < storedTasks.length; i++) {
                 var li = document.createElement("li");
-                li.innerHTML = oldtask;
-
+                const myTask = storedTasks[i];
+                const myDate = storedDates[i];
+                li.innerHTML = `<input type="checkbox"><span class="taskText">${myTask}</span> <span class="taskDate">${myDate}</span><button type="button" class="deleteButton">Delete</button>`;
+                
                 let deleteButton = li.querySelector(".deleteButton");
                 deleteButton.addEventListener("click", function(){Todo.deleteTask(li)});
 
@@ -140,11 +161,17 @@ let Todo = {
                 let editDate = li.querySelector(".taskDate");
                 editDate.addEventListener("click", function(){Todo.editTaskDate(li)});
 
+                if (storedCheckboxes[i] == 1){
+                    li.firstChild.checked = true;
+                } else {
+                    li.firstChild.checked = false;
+                }
+
                 this.tasks.push(li);
             }
 
             this.draw();
-        }
+        } 
     }
 }
 

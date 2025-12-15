@@ -1,16 +1,71 @@
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(97, 139, 187);
+    display: grid;
+    background-image: url("bg.jpg");
+    background-size:     cover;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-body div {
-    background-color: #ffffff;
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;  
-    font-size: 30px;
+#weather-search-params {
+    border: 5px solid #739eae;
+    background-color: aliceblue;
+    border-radius: 15px;
+    padding-bottom: 10px;
+}
+
+#weather-search-params, #weather-results-container {
+    width: 350px;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.weather-block {
+    display: block;
+    width: 350px;
+    height: 120px;
+    border: 5px solid #739eae;
+    background-color: aliceblue;
+    border-radius: 15px;
+    position: relative;
+    margin: 15px auto;
+    text-align: left;
+}
+
+.weather-date {
+    font-weight: bold;
+    width: 350px;
+    position: absolute;
+    margin: auto;
+    text-align: left;
+    left: 5px;
+    top: 5px;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.weather-icon {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+}
+
+.weather-temperature {
+    position: absolute;
+    top: 30px;
+    left: 110px;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.weather-temperature-feels-like {
+    position: absolute;
+    top: 70px;
+    left: 110px;
+}
+
+.weather-description {
+    position: absolute;
+    top: 90px;
+    left: 110px;
 }

@@ -1,5 +1,5 @@
 body {
-  background-color: #F5D8B0;
+  background-image: url("/resources/bg.jpg");
   text-align: center;
   font-family: "Times New Roman" ,"Georgia", Serif;
   display: flex;

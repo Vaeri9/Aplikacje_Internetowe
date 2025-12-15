@@ -8,12 +8,22 @@
 </head>
 
 <body>
-    <div id="address">
-        <input type="text" id="addressInput" placeholder="Search address" onkeydown="AddressInputKeyDown(this)">
-        <button onclick="SearchWeather()">Search</button>
+    <div id="weather-search-params">
+        <h1>Weather Report</h1>
+        <input type="text" value="Szczecin, Poland" id="locationInput">
+        <button id="checkButton">Check</button>
     </div>
-    <div id="weather">
-    </div>
-</body>
 
-<script src="script.js"></script>
+    <div id="weather-results-container">
+        <div class="weather-block">
+            <div class="weather-date"></div>
+            <div class="weather-temperature"></div>
+            <div class="weather-temperature-feels-like"></div>
+            <div class="weather-icon"></div>
+            <div class="weather-description"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
